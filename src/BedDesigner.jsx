@@ -939,10 +939,10 @@ function placeAll(selected, dims, opts, rng, shuffle, roles){
   const hs = selected.map(p=>p.h);
   const minH = hs.length?Math.min(...hs):12, maxH = hs.length?Math.max(...hs):48;
   const rankOf = (p)=>{
-    let r = (p.h - minH)/Math.max(1,(maxH-minH));      // taller -> further back
-    if(roles.isStructure(p)) r = Math.max(r,0.82);
-    if(roles.isFront(p))     r = Math.min(r,0.18);
-    if(roles.isGrass(p))     r = Math.max(r,0.5);
+    let r = (p.h - minH)/Math.max(1,(maxH-minH));      // height drives depth: tall -> back
+    if(roles.isFront(p))           r = Math.min(r, 0.22);          // edgers hug the front
+    else if(roles.isStructure(p))  r = Math.min(1, r*0.8 + 0.2);   // shrubs lean back, but height still rules
+    else if(roles.isGrass(p))      r = Math.min(1, r*0.85 + 0.12); // grasses a touch back
     return clamp(r,0,1);
   };
   const tierOf = (p)=> clamp(Math.floor(rankOf(p)*nTiers), 0, nTiers-1);   // 0 = front rank
