@@ -1,0 +1,27 @@
+{
+ "annabelle": {
+  "fall": "/plants/annabelle-fall.png",
+  "spring": "/plants/annabelle-spring.png",
+  "summer": "/plants/annabelle-summer.png"
+ },
+ "boxwood": {
+  "fall": "/plants/boxwood-fall.png",
+  "spring": "/plants/boxwood-spring.png",
+  "summer": "/plants/boxwood-summer.png"
+ },
+ "fothergilla": {
+  "fall": "/plants/fothergilla-fall.png",
+  "spring": "/plants/fothergilla-spring.png",
+  "summer": "/plants/fothergilla-summer.png"
+ },
+ "limelight": {
+  "fall": "/plants/limelight-fall.png",
+  "spring": "/plants/limelight-spring.png",
+  "summer": "/plants/limelight-summer.png"
+ },
+ "spirea": {
+  "fall": "/plants/spirea-fall.png",
+  "spring": "/plants/spirea-spring.png",
+  "summer": "/plants/spirea-summer.png"
+ }
+}
